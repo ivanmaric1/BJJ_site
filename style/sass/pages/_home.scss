@@ -1,0 +1,25 @@
+.section-about {
+    background-color: var(--light-grey);
+    padding: 42rem 0;
+    margin-top: -20vh;
+}
+
+.main-grid {
+    display: flex;
+    justify-content: space-between;
+
+    div.main__text {
+        flex: 1;
+        font-size: 5rem;
+        align-self: center;
+        padding: 0 10rem;
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .main__image {
+        flex: 1;
+    }
+}
