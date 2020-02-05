@@ -23,3 +23,21 @@
         flex: 1;
     }
 }
+
+.section-features {
+    padding: 20rem 10rem;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(160, 151, 77, 0.8),
+        rgba(109,132,148,0.8)), 
+        url(../img/kamp_nacrtano.jpg);
+    background-size: cover;
+    background-position: bottom;
+    display: inline-flex;
+    transform: skewY(-7deg);
+    margin-top: -13rem;
+
+    & > * {
+        transform: skewY(7deg);
+    }
+}

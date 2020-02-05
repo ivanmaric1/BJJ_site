@@ -102,6 +102,18 @@ body {
   margin-bottom: 8rem;
 }
 
+.u-margin-top-small {
+  margin-top: 1.5rem;
+}
+
+.u-margin-top-medium {
+  margin-top: 4rem;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
 header.header {
   height: 95vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(160, 151, 77, 0.8)), to(rgba(109, 132, 148, 0.8))), url(../img/header.jpg);
@@ -212,6 +224,39 @@ header.header {
           transform: translateY(0px);
   -webkit-box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.feature-box {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.8rem;
+  line-height: 1.8;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem grey;
+          box-shadow: 0 1.5rem 4rem grey;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 4rem;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.feature-box__icon {
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--logo-color)), to(var(--dark-color)));
+  background-image: linear-gradient(to right, var(--logo-color), var(--dark-color));
+  display: inline;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.feature-box:hover {
+  -webkit-transform: translateY(-1.5rem) scale(1.03);
+          transform: translateY(-1.5rem) scale(1.03);
 }
 
 .composition {
@@ -421,5 +466,24 @@ header.header {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.section-features {
+  padding: 20rem 10rem;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(160, 151, 77, 0.8)), to(rgba(109, 132, 148, 0.8))), url(../img/kamp_nacrtano.jpg);
+  background-image: linear-gradient(to right bottom, rgba(160, 151, 77, 0.8), rgba(109, 132, 148, 0.8)), url(../img/kamp_nacrtano.jpg);
+  background-size: cover;
+  background-position: bottom;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transform: skewY(-7deg);
+          transform: skewY(-7deg);
+  margin-top: -13rem;
+}
+
+.section-features > * {
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
 }
 /*# sourceMappingURL=main.css.map */
