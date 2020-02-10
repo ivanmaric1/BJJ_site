@@ -47,3 +47,12 @@
     padding: 42rem 0 50rem 0;
     margin-top: -20vh;
 }
+
+footer {
+    background-color: var(--logo-color);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
