@@ -1,0 +1,104 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.card {
+    position: relative;
+    height: 600px;
+    width: 400px;
+    perspective: 1500px;
+    margin: 0 auto;
+  
+
+    &__side {
+        color: lightskyblue;
+        font-size: 2rem;
+        height: 600px;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem gray;
+        overflow: hidden;
+
+        p {
+            display: block;
+            text-align: center;
+        }
+
+        &-front {
+            background-color: lightpink;
+            color: white;
+        }
+
+        &-back {
+            transform: rotateY(-180deg);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, var(--card-primary-light),var(--card-primary-dark));
+            }
+
+            button {
+                display: block;
+                background-color: var(--logo-color);
+                color: white;
+                padding: 1rem 3rem;
+                font-size: 3rem;
+            }
+
+        }
+    }
+
+    &:hover &__side-front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side-back {
+        transform: rotateY(0deg);
+    }
+
+    &__picture {
+        background-size: cover;
+        height: 30rem;
+        background-blend-mode: soft-light;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, var(--card-primary-light),var(--card-primary-dark)), url(/img/card1.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, var(--card-primary-light),var(--card-primary-dark)), url(/img/card2.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, var(--card-primary-light),var(--card-primary-dark)), url(/img/card3.jpg);
+        }
+
+        &--4 {
+            background-image: linear-gradient(to right bottom, var(--card-primary-light),var(--card-primary-dark)), url(/img/card4.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    &__details {
+        padding: 1rem;
+    }
+}
